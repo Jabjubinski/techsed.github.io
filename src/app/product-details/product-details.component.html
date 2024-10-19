@@ -1,0 +1,33 @@
+<section class="product-details">
+  <div class="product">
+    <div class="img-container-img-description">
+      <div class="product-image-container">
+        <img
+          class="product-image"
+          [src]="product.images[0]"
+          [alt]="product.title"
+        />
+      </div>
+      <div class="img-container-desc">
+        <p style="font-weight: 300">{{ product.description }}</p>
+      </div>
+    </div>
+    <div class="product-description">
+      <h3 style="font-weight: bold">{{ product.title }}</h3>
+      <p style="font-weight: 400">
+        {{ product.price.current }} {{ product.price.currency }}
+      </p>
+      <div class="buy-buttons">
+        <div>
+          <button class="button1" (click)="addToCart()">Add To Cart</button>
+        </div>
+        <div>
+          <button class="button2">Buy Now</button>
+        </div>
+      </div>
+      <h5 style="font-weight: 500; font-size: 1rem">Product Info</h5>
+      <p style="font-weight: 300; font-size: 1rem">{{ product.description }}</p>
+    </div>
+  </div>
+</section>
+<app-cart-sidebar></app-cart-sidebar>

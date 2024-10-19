@@ -1,0 +1,18 @@
+<div class="sidebar" [ngClass]="{ 'open': isVisible }">
+  <button (click)="toggleSidebar()" class="close-btn">X</button>
+  <div class="cart-items">
+    <h4>Your Cart</h4>
+    <ul>
+      <li *ngFor="let item of cartItems">
+        <img [src]="item.images[0]" alt="{{ item.title }}" class="item-image" />
+        <div class="item-info">
+          <p>{{ item.title }}</p>
+          <p>{{ item.price.current }} {{ item.price.currency }}</p>
+        </div>
+        <button (click)="removeItem(item._id)">X</button> 
+      </li>
+    </ul>
+    <h3>Total: {{calculateTotal()}}</h3>
+    <button class="go-to-cart" [routerLink]="['/shopping-cart']">Go to cart</button>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<header>
+  <div class="main-header">
+    <div class="logo-container">
+      <a routerLink="/">
+        <h3>TechTree</h3>
+      </a>
+    </div>
+  </div>
+  <div class="search-bar-container">
+    <input type="search" placeholder="Search" id="search-bar-input" />
+    <div class="search-icon-container">
+      <img
+        src="assets/search-svgrepo-com.svg"
+        alt="image of a magnifying glass"
+        class="search-icon"
+      />
+    </div>
+  </div>
+  <div class="log-in-container">
+    <div class="logIn-picture-text-container">
+      <img
+        src="assets/profile-svgrepo-com.svg"
+        alt="log in profile picture"
+        class="log-in-picture"
+      />
+      <span class="log-in-text">
+        <p>Log In</p>
+      </span>
+    </div>
+
+    <img
+      src="assets/heart-svgrepo-com.svg"
+      alt="heart picture"
+      class="heart-picture"
+    />
+    <div class="shopping-cart-container">
+      <a [routerLink]="['/shopping-cart']">
+        <img
+          src="assets/shopping-cart-outline-svgrepo-com.svg"
+          alt="shopping cart"
+          class="shopping-cart"
+        />
+      </a>
+      <span class="shopping-items-counter">
+        <p>0</p>
+      </span>
+    </div>
+  </div>
+</header>
+<nav>
+  <div class="shopping-categories-list">
+    <ul>
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="myactive"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          class="categories-item"
+          routerLink="/products"
+          routerLinkActive="myactive"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Shop</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

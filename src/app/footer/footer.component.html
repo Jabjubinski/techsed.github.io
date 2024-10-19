@@ -1,0 +1,59 @@
+<footer>
+  <div class="company-info">
+    <div class="categories">
+      <h3>Store Location</h3>
+      <p>500 Terry Francine Street</p>
+      <p>San Fancisco, CA 94158</p>
+      <p>info&#64;mysite.com</p>
+      <p>123-456-7890</p>
+    </div>
+
+    <div class="categories">
+      <h4>Shop</h4>
+      <a routerLink="products">
+        <p>Shop All</p>
+      </a>
+      <a routerLink="products" [queryParams]="{ categoryId: 1 }">
+        <p>Computers</p>
+      </a>
+      <a routerLink="products" [queryParams]="{ categoryId: 2 }">
+        <p>Mobile</p>
+      </a>
+      <p>Sale</p>
+    </div>
+
+    <div class="categories">
+      <h4>Customer Support</h4>
+      <p>Contact Us</p>
+      <p>Help Center</p>
+      <p>About Us</p>
+      <p>Careers</p>
+    </div>
+
+    <div class="categories">
+      <h4>Policy</h4>
+      <p>Shipping & Returns</p>
+      <p>Terms & Conditions</p>
+      <p>Payment Methods</p>
+      <p>FAQ</p>
+    </div>
+  </div>
+  <hr />
+  <div class="payment-methods">
+    <p class="payment-methods-text" style="color: hsl(0, 0%, 70%)">
+      We Accept Following Payments Methods
+    </p>
+    <div class="payment-methods-cards">
+      <img src="/assets/Visa.webp" alt="visa" />
+      <img src="/assets/brand-mastercard@3x.webp " alt="mastercard" />
+      <img src="/assets/brand-amex@3x.webp" alt="american-express" />
+      <img src="/assets/PayPal.webp" alt="paypal" />
+      <img src="/assets/Diners.webp" alt="paypal" />
+      <img src="/assets/Discover.webp" alt="paypal" />
+      <img src="/assets/brand-jcb@3x.webp" alt="paypal" />
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © 2024 TechTree. All rights reserved.</p>
+  </div>
+</footer>

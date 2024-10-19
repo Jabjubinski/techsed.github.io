@@ -1,0 +1,55 @@
+.company-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0px 50px 0px;
+  width: 80%;
+  margin-inline: auto;
+}
+footer {
+  width: 80%;
+  margin-inline: auto;
+}
+.payment-methods-text {
+  width: 100%;
+  text-align: center;
+}
+.payment-methods-cards {
+  display: flex;
+  width: 80%;
+  margin-inline: auto;
+  gap: 100px;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 25px;
+}
+.copyright {
+  width: 80%;
+  margin-inline: auto;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+@media (max-width: 1517px) {
+  .company-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+  }
+}
+@media (max-width: 1072px) {
+  .payment-methods-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    grid-template-rows: repeat(5, 2fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+}
