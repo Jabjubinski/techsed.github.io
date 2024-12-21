@@ -327,8 +327,8 @@ swiper-slide {
   justify-content: flex-end;
   position: relative;
 }
-.circle-price{
-  font-family: 'poppins', sans-serif;
+.circle-price {
+  font-family: "poppins", sans-serif;
   background-color: hsl(0, 68%, 51%);
   color: white;
   border-radius: 50%;
@@ -348,7 +348,110 @@ swiper-slide {
   margin-top: 2em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.text-gradient{
-  background: linear-gradient(45deg, #ffffff, #f0e68c, #ff6347);  background-clip: text;
+.text-gradient {
+  background: linear-gradient(45deg, #ffffff, #f0e68c, #ff6347);
+  background-clip: text;
   color: transparent;
+}
+.pickup-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.pickup-text > svg {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+}
+.pickup-text > p {
+  margin: 0;
+}
+.display-swiper {
+  display: none;
+}
+.display-swiper2 {
+  display: none;
+}
+@media (max-width: 1330px) {
+  .pickup-text {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 1199px) {
+  .display-swiper {
+    display: block;
+  }
+  .first-swiper {
+    display: none;
+  }
+}
+@media (max-width: 1185px) {
+  .pickup-text {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 757px) {
+  .pickup-text > svg {
+    display: none;
+  }
+  .pickup {
+    display: none;
+  }
+}
+@media (max-width: 909px) {
+  .carousel-text-left-aligner > h3,
+  .carousel-text-left-aligner > p {
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel-text-container {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .category-pictures {
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-by-categories-heading > h3 {
+    font-size: 1.5rem;
+  }
+  .deals-just-in {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2em;
+  }
+  .thirtyPercent,
+  .justIn {
+    width: 100%;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    display: none;
+  }
+}
+@media (max-width: 616px) {
+  .display-swiper {
+    display: none;
+  }
+  .display-swiper2 {
+    display: block;
+  }
+  swiper-slide{
+    border: none;
+    height: inherit;
+  }
+}
+@media (max-width: 660px){
+  .best-price-ad{
+    display: none;
+  }
 }

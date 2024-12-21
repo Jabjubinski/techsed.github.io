@@ -282,8 +282,52 @@
       <h3>Best Sellers</h3>
     </div>
     <swiper-container
-      class="mySwiper"
+      class="mySwiper first-swiper"
       slides-per-view="6"
+      navigation="true"
+      space-between="20"
+    >
+      <swiper-slide *ngFor="let product of productData">
+        <div class="img-container">
+          <img class="myImg" [src]="product.images[0]" alt="" />
+        </div>
+        <p>{{ product.title }}</p>
+        <p style="color: purple">
+          {{ "GEL" + " " + product.price.current + "." + "00" }}
+        </p>
+        <a
+          routerLink="product-details"
+          [queryParams]="{id:product._id}"
+        >
+          <button class="btn btn-primary">See more</button>
+        </a>
+      </swiper-slide>
+    </swiper-container>
+    <swiper-container
+      class="mySwiper display-swiper"
+      slides-per-view="3"
+      navigation="true"
+      space-between="20"
+    >
+      <swiper-slide *ngFor="let product of productData">
+        <div class="img-container">
+          <img class="myImg" [src]="product.images[0]" alt="" />
+        </div>
+        <p>{{ product.title }}</p>
+        <p style="color: purple">
+          {{ "GEL" + " " + product.price.current + "." + "00" }}
+        </p>
+        <a
+          [routerLink]="['/product-details']"
+          [queryParams]="{ id: product._id }"
+        >
+          <button class="btn btn-primary">See more</button>
+        </a>
+      </swiper-slide>
+    </swiper-container>
+    <swiper-container
+      class="mySwiper display-swiper2"
+      slides-per-view="1"
       navigation="true"
       space-between="20"
     >
@@ -338,7 +382,7 @@
         <p>Terms and conditions apply</p>
         <button
           routerLink="products"
-          [queryParams]="{ categoryId: 1 }"
+          [queryParams]="{categoryId:1}"
           class="View-All carousel-btn-shop-now save-up-to-button"
         >
           SHOP

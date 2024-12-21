@@ -9,7 +9,7 @@ import { CartService } from '../cart.service';
 export class ShoppingCartComponent {
   public cartItems: any[] = [];
 
-  constructor(private cartService: CartService) {
+  constructor(public cartService: CartService) {
     this.cartItems = this.cartService.getCartItems(); // Load cart items
   }
 

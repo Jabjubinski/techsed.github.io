@@ -21,6 +21,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { CardSliderComponent } from './card-slider/card-slider.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 register();
 @NgModule({
   declarations: [
@@ -43,8 +44,8 @@ register();
     MatSliderModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
-    LayoutModule
-
+    LayoutModule,
+    MatCheckboxModule
   ],
   providers: [
     provideClientHydration(),

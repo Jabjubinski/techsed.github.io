@@ -6,6 +6,7 @@
       </a>
     </div>
   </div>
+
   <div class="search-bar-container">
     <input type="search" placeholder="Search" id="search-bar-input" />
     <div class="search-icon-container">
@@ -16,58 +17,41 @@
       />
     </div>
   </div>
+
   <div class="log-in-container">
-    <div class="logIn-picture-text-container">
+    <!-- <div class="logIn-picture-text-container">
       <img
         src="assets/profile-svgrepo-com.svg"
         alt="log in profile picture"
         class="log-in-picture"
       />
-      <span class="log-in-text">
-        <p>Log In</p>
-      </span>
-    </div>
+      <span class="log-in-text">Log In</span>
+    </div> -->
 
-    <img
-      src="assets/heart-svgrepo-com.svg"
-      alt="heart picture"
-      class="heart-picture"
-    />
+    <!-- <img src="assets/heart-svgrepo-com.svg" alt="heart icon" class="icon heart-picture" /> -->
     <div class="shopping-cart-container">
       <a [routerLink]="['/shopping-cart']">
         <img
           src="assets/shopping-cart-outline-svgrepo-com.svg"
           alt="shopping cart"
-          class="shopping-cart"
+          class="icon shopping-cart"
         />
       </a>
-      <span class="shopping-items-counter">
-        <p>0</p>
-      </span>
+      <span class="shopping-items-counter">{{ cartItems.length }}</span>
     </div>
   </div>
+  <!-- <div class="burger-menu">
+    <img src="assets/burger.svg" class="burger" alt="burger menu icon" />
+  </div> -->
 </header>
+
 <nav>
-  <div class="shopping-categories-list">
-    <ul>
-      <li>
-        <a
-          routerLink="/"
-          routerLinkActive="myactive"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          class="categories-item"
-          routerLink="/products"
-          routerLinkActive="myactive"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >Shop</a
-        >
-      </li>
-    </ul>
-  </div>
+  <ul class="shopping-categories-list">
+    <li>
+      <a routerLink="/" routerLinkActive="myactive" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    </li>
+    <li>
+      <a class="categories-item" routerLink="/products" routerLinkActive="myactive" [routerLinkActiveOptions]="{ exact: true }">Shop</a>
+    </li>
+  </ul>
 </nav>

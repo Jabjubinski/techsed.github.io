@@ -46,6 +46,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin-left: 2em;
 }
 
 .input-group > input {
@@ -89,4 +90,59 @@
 
 .mat-slider {
   width: 100%;
+}
+.toggle-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  display: none;
+}
+.toggle-button > button {
+  width: 200px;
+}
+.input-group-responsive {
+  z-index: 1;
+  background-color: white;
+  position: absolute;
+  width: 50%; /* Adjusted width for better layout */
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.input-group-responsive > input {
+  border-radius: 25px !important;
+  border: 1px solid var(--gray);
+  width: 100%;
+  padding: 5px 7px;
+}
+
+.input-group-responsive > button {
+  border-radius: 25px !important;
+  border: 1px solid black;
+  width: 100%;
+}
+@media (max-width: 720px) {
+  .card {
+    width: 15rem !important;
+  }
+  .products {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1;
+    grid-row: 1;
+  }
+}
+@media (max-width: 768px) {
+  .input-group{
+    display: none;
+  }
+  .toggle-button{
+    display: block;
+  }
 }

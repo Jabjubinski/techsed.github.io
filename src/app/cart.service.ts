@@ -4,14 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CartService {
-  private cartItems: any[] = [];
+  public cartItems: any[] = [];
 
   addToCart(product: any) {
     this.cartItems.push(product);
   }
 
   removeFromCart(productId: string) {
-    // Remove only the product with the matching productId
     this.cartItems = this.cartItems.filter(item => item._id !== productId);
   }
 

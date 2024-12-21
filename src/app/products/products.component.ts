@@ -1,8 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { HttpService } from '../http.service';
 import { ActivatedRoute } from '@angular/router';
-import { info } from 'console';
 
 @Component({
   selector: 'app-products',
@@ -12,6 +10,9 @@ import { info } from 'console';
 export class ProductsComponent {
 
   //filtering variables
+
+  inputGroupVisible = false;
+
   minPrice!: any;
 
   maxPrice!: any;
@@ -42,8 +43,8 @@ export class ProductsComponent {
       }
     });
 
-    
-    
+
+
   }
 
   productFilter() {
@@ -61,5 +62,8 @@ export class ProductsComponent {
       this.keyWord = '';
     })
   }
-  
+  toggleFilter() {
+    this.inputGroupVisible = !this.inputGroupVisible
+  }
+
 }

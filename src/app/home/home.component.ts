@@ -8,7 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent {
   public category!: any;
+  
   public productData!: any;
+  
+  public id!: any;
+  
+  public product!: any;
 
   constructor(public service: HttpService, public route: ActivatedRoute){
     this.service.getAllProducts().subscribe((info: any) => {
@@ -20,6 +25,13 @@ export class HomeComponent {
       console.log(query);
       this.category = query.categoryId
     })
+
+    this.route.queryParams.subscribe((param: any) => {
+      this.id = param.id;
+      this.service.getSingleProduct(this.id).subscribe((apiProduct: any) => {
+        this.productData = apiProduct;
+      });
+    });
   }
   
 }

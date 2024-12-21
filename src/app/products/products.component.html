@@ -1,3 +1,8 @@
+<div class="toggle-button">
+  <button (click)="toggleFilter()" style="border: none; border-radius: 25px">
+    Filters
+  </button>
+</div>
 <section class="products-page">
   <section class="input-group">
     <div class="browse-by">
@@ -29,8 +34,48 @@
 
     <label for="keyWord">Search</label>
     <input id="keyWord" type="text" [(ngModel)]="keyWord" />
-    <p>Min Price: {{minPrice}}</p>
-    <p>Max Price: {{maxPrice}}</p>
+    <p>Min Price: {{ minPrice }}</p>
+    <p>Max Price: {{ maxPrice }}</p>
+    <mat-slider min="1" max="10000" step="1" color="accent">
+      <input value="1" matSliderStartThumb [(ngModel)]="minPrice" />
+      <input value="10000" matSliderEndThumb [(ngModel)]="maxPrice" />
+    </mat-slider>
+
+    <button (click)="productFilter()" class="btn btn-primary">Filter</button>
+    <button (click)="clearFilters()">Clear Filters</button>
+  </section>
+  <section class="input-group-responsive" *ngIf="inputGroupVisible">
+    <div class="browse-by">
+      <h3>Browse by</h3>
+      <hr />
+      <h5>All Products</h5>
+      <ul class="browse-list">
+        <li>
+          <a
+            routerLink="/products"
+            [queryParams]="{ categoryId: 1 }"
+            class="browse-p"
+            >Computers</a
+          >
+        </li>
+        <li>
+          <a
+            a
+            routerLink="/products"
+            [queryParams]="{ categoryId: 2 }"
+            class="browse-p"
+            >Mobile</a
+          >
+        </li>
+        <li><a href="#" class="browse-p">Best Sellers</a></li>
+        <li><a href="#" class="browse-p">Sale</a></li>
+      </ul>
+    </div>
+
+    <label for="keyWord">Search</label>
+    <input id="keyWord" type="text" [(ngModel)]="keyWord" />
+    <p>Min Price: {{ minPrice }}</p>
+    <p>Max Price: {{ maxPrice }}</p>
     <mat-slider min="1" max="10000" step="1" color="accent">
       <input value="1" matSliderStartThumb [(ngModel)]="minPrice" />
       <input value="10000" matSliderEndThumb [(ngModel)]="maxPrice" />

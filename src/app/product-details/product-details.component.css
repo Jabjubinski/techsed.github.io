@@ -1,92 +1,71 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.carousel-item{
-  border: 1px solid red;
-  height: 512px;
-  width: 512px;
-}
-.product-details {
-  width: 80%;
-  margin-inline: auto;
-  margin-top: 40px;
-}
-.product {
+.product{
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.img-container-img-description{
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  border: 1px solid black;
+  border-bottom: none;
+  background-color: none;
   width: 50%;
   margin-inline: auto;
-  gap: 25px;
 }
-.product-description {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-.product-image-container {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--gray);
-  gap: 50px;
-  height: 100%;
-  background-color: white;
-  padding: 100px 50px 100px 50px;
-  margin: 0.5em 0em 0.5em 0em;
-  cursor: crosshair;
-  height: 512px;
-  width: 512px;
-}
-.product-image-container img {
+.img-container-desc{
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  justify-content: center;
+  align-items: center;
 }
-.buttons {
+.product-description{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1em;
+  padding: 25px;
+  width: 50%;
+  border: 1px solid;
 }
-.img-container-desc {
-  background-color: var(--gray);
-}
-.buy-buttons {
+.buy-buttons{
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
-  margin: 1.5em 0em 1.5em 0em;
+  gap: 1.2em;
+}
+.product-image{
+  object-fit: contain;
+}
+carousel-item{
+  height: inherit;
+  width: inherit;
+}
+.carousel-inner > .carousel-item > img {
+  width:640px;
+  height:360px;
 }
 .button1,
 .button2 {
-  width: 100%;
-  border: transparent;
   border-radius: 25px;
-  padding: 0.5em;
-}
-.button1 {
+  border: none;
   background-color: var(--purple);
-  color: rgba(255, 255, 255, 0.575);
+  padding: .5em;
+  color: white;
 }
-.button2 {
-  background-color: var(--black);
-  color: rgba(255, 255, 255, 0.575);
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+  filter: invert(100%);
 }
-.img-container-desc {
-  margin: 1em 0em 1em 0em;
-  padding: 0.5em;
+#carouselExampleControls{
+  width: 25%;
 }
-.reviews {
-  width: 90%;
-  margin-inline: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.carousel-inner,
+.carousel-item,
+carouse-item>img{
+  width: 100%;
+  height: 100%;
 }
-.review-container {
-  width: inherit;
-  margin-inline: inherit;
-}
-                                          
